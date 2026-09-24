@@ -1,33 +1,34 @@
-# Aaisha Iqbal — Make Sense of It
+# Aaisha Iqbal | Portfolio
 
-A premium editorial portfolio built around a continuous WebGL world, interactive analytical scenes, and five grounded project stories.
+My personal portfolio showcasing my work in data analytics, intelligent applications, and the projects I am building as I continue exploring the intersection of data and AI.
 
-## Run locally
-Because the project uses ES modules, run it through a local web server instead of double-clicking `index.html`.
+## Featured Work
 
-### VS Code
-Install the "Live Server" extension, then right-click `index.html` → **Open with Live Server**.
+The portfolio includes selected projects across data analytics, machine learning, business intelligence, APIs, and intelligent applications, including:
 
-### Python
-```bash
-python -m http.server 8000
-```
-Then open `http://localhost:8000`.
+- Crop Recommendation System
+- SpecTrace
+- Weather Analytics Dashboard
+- Customer Behaviour Analysis
+- Beauty Products Analysis
 
-## Tech
-- HTML / CSS / JavaScript
-- Three.js WebGL
-- Custom GLSL point shader and canvas-texture data labels
-- Draggable optical data-lens interaction with touch fallback
-- GSAP + ScrollTrigger scene choreography
-- Five interactive project chapters, including SpecTrace
-- Interactive community map and personal-object gallery
-- Section-specific interactions: data paths, growing terrain, directional weather, hoverable clusters, workflow progress, archive assembly, and draggable still life
-- Active desktop navigation and an accessible mobile menu
-- Mobile quality tiers, capped DPR, reduced-motion and WebGL fallbacks
+## Built With
 
-## Content sources
-Portfolio text is grounded in Aaisha's supplied CV and current LinkedIn profile details. No private credentials or secrets are embedded.
+HTML · CSS · JavaScript · Three.js · GSAP
 
-## Deploy
-This is a static site and can be deployed directly to Vercel, Netlify, GitHub Pages, or Cloudflare Pages.
+## Explore
+
+Visit the live portfolio to explore my projects, experience, learning journey, and the things I enjoy beyond data.
+
+**Live Portfolio:** https://vercel.com/aaisha1/aaisha-iqbal-portfolio
+
+## Connect
+
+- LinkedIn: https://www.linkedin.com/in/aaisha-iqbal/
+- GitHub: https://github.com/Aaisha-Nexus
+- Instagram: https://www.instagram.com/blog.with.aaisha/
+- Email: aaishaeduc@gmail.com
+
+---
+
+Designed and developed by Aaisha Iqbal.
