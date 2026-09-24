@@ -1,0 +1,44 @@
+# Dependencies
+node_modules/
+
+# Build output (if a build tool is added later)
+dist/
+build/
+
+# Environment files and local Vercel state
+.env
+.env.*
+!.env.example
+.vercel/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local temporary files
+.tmp-*/
+
+# Local QA / temporary artifacts
+.final-qa-crop/
+.final-qa-crop-2/
+.qa-final-cleanup/
+.qa-final-cleanup-2/
+.qa-final-weather/
+.tmp-video-frames/
+
+# Local QA screenshots
+qa-spectrace.png

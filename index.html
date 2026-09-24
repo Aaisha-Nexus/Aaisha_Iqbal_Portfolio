@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a0b0d">
+  <meta name="description" content="Aaisha Iqbal — Data Analyst and Computer Science student exploring Data + AI in Karachi, Pakistan.">
+  <title>Aaisha Iqbal — Make Sense of It</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css?v=beyond-edge-safe-20260924">
+</head>
+<body class="is-loading">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="loader" aria-hidden="true"><span>LOADING PORTFOLIO</span><i></i></div>
+  <header class="site-header">
+    <a class="wordmark" href="#hero" aria-label="Aaisha Iqbal, home">AAISHA IQBAL</a>
+    <nav class="desktop-nav" aria-label="Primary navigation"><a href="#about">About</a><a href="#work">Projects</a><a href="#experience">Experience</a><a href="#learning">Learning</a><a href="#beyond">Beyond data</a><a href="#contact">Contact</a></nav>
+    <a class="header-contact" href="#contact">Let’s talk <span>↗</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobileMenu"><span>Menu</span><i></i></button>
+  </header>
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation"><a href="#about">About</a><a href="#work">Projects</a><a href="#experience">Experience</a><a href="#learning">Learning</a><a href="#beyond">Beyond data</a><a href="#contact">Contact</a></nav>
+  <div class="rail" aria-hidden="true"><span class="rail-label">AAISHA IQBAL</span><i><b id="progressBar"></b></i><span id="sectionCount">00 / 07</span></div>
+  <canvas id="webgl" aria-label="Interactive data visualization"></canvas>
+  <div class="webgl-fallback" aria-hidden="true"></div>
+  <main id="main">
+    <section class="hero chapter chapter-dark" id="hero" data-scene="chaos" data-index="00">
+      <div class="hero-copy" aria-live="polite"><h1><span>THIS DOESN’T</span><span>MAKE SENSE.</span></h1><p class="yet">yet.</p></div>
+      <div class="identity" aria-hidden="true"><p class="hero-hello">Hi, I’m</p><h2>AAISHA<br>IQBAL.</h2><p class="hero-role mono">DATA ANALYST · COMPUTER SCIENCE STUDENT</p><p class="hero-intro">Exploring the intersection of data and AI, turning curiosity into projects, questions into insights, and ideas into things I can build.</p></div>
+      <div class="scanner-wrap" aria-label="Drag horizontally to interact with the data"><div class="scanner" id="scanner" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="12" aria-label="Interactive data position"><span class="scanner-edge edge-a"></span><span class="scanner-edge edge-b"></span><span class="scanner-line"></span></div></div>
+      <button class="signal-button mono" id="signalButton" type="button"><span>Find the signal</span><i>→</i></button>
+    </section>
+    <section class="intro chapter chapter-paper" id="about" data-scene="grid" data-index="01">
+      <div class="section-label mono">01 / INTRODUCTION</div>
+      <canvas class="intro-wave-canvas" id="introWaveCanvas" aria-hidden="true"></canvas>
+      <div class="intro-layout"><h2>I LIKE<br>FINDING<br><span class="intro-last-line">OUT <span>WHY.</span></span></h2><div class="intro-copy"><p>I like treating data like something to investigate.</p><p>I follow the clues, test patterns, question what I am seeing and keep digging until the information starts to reveal something useful.</p><p>I am still early in this landscape, but I am constantly learning, exploring emerging technologies, bringing more advanced concepts into my projects and moving forward with every problem I try to understand.</p></div></div>
+      <div class="about-paths" aria-hidden="true">
+        <svg viewBox="0 0 1200 340" preserveAspectRatio="none"><path d="M-20,238 C190,55 270,315 475,155 S790,35 1220,205"/><path d="M-20,290 C195,225 290,25 510,215 S865,300 1220,85"/><path class="path-dominant" d="M-20,180 C210,330 365,76 585,168 S930,230 1220,128"/></svg>
+        <div class="path-node n1"><i></i><span>CURIOUS</span></div><div class="path-node n2"><i></i><span>ANALYSIS</span></div><div class="path-node n3"><i></i><span>PATTERNS</span></div><div class="path-node n4"><i></i><span>LEARNING</span></div><div class="path-node n5"><i></i><span>QUESTIONS</span></div><div class="path-node n6"><i></i><span>INSIGHT</span></div>
+      </div>
+    </section>
+    <section class="work chapter chapter-dark" id="work" data-scene="crop" data-index="02">
+      <div class="work-sticky"><div class="section-label mono">02 / SELECTED WORK</div><div class="project-stage" aria-hidden="true"><span>POINTS</span><b>→</b><span>SOIL</span></div></div>
+      <div class="project-hook" id="projectTransition"><canvas class="project-transition-canvas" id="projectTransitionCanvas" aria-hidden="true"></canvas><div class="transition-tiles" id="transitionTiles" aria-hidden="true"></div><div class="transition-grid" aria-hidden="true"></div><div class="project-hook-copy"><p class="mono">05 PROJECTS</p><h2>DIFFERENT QUESTIONS.<br>DIFFERENT DATA.<br><span>SAME CURIOSITY.</span></h2></div></div>
+      <article class="project project-crop" id="project-01" data-project="crop">
+        <div class="scene-notes crop-notes" aria-hidden="true"><span>N<b></b></span><span>P<b></b></span><span>K<b></b></span><em>TEMPERATURE · HUMIDITY · RAINFALL</em></div>
+        <div class="project-index mono">CASE 01 / 05 <span>AGRICULTURE × ML</span></div><h2>CROP<br>RECOMMENDATION<br>SYSTEM</h2><p class="project-deck">Soil and environmental inputs become an understandable crop recommendation.</p>
+        <dl class="story-grid"><div><dt>Question</dt><dd>How can soil and environmental conditions help identify a suitable crop?</dd></div><div><dt>Process</dt><dd>Cleaned the data, engineered features and compared classification models.</dd></div><div><dt>Build</dt><dd>Connected the pipeline to Streamlit, Flask and a Gemini-powered assistant.</dd></div><div><dt>Learning</dt><dd>Performance matters, but so do clean inputs, clear outputs and usable delivery.</dd></div></dl>
+        <div class="project-foot mono"><span>PYTHON / PANDAS / SCIKIT-LEARN / STREAMLIT / FLASK / GEMINI</span><a href="https://github.com/Aaisha-Nexus/agri-crop-recommendation-pipeline" target="_blank" rel="noreferrer">Repository ↗</a></div>
+      </article>
+      <article class="project project-spectrace" id="project-02" data-project="spectrace">
+        <div class="scene-notes spectrace-notes mono" aria-hidden="true"><span>REQUEST</span><i></i><span>SCOPE</span><i></i><span>EVIDENCE</span><i></i><span>HUMAN REVIEW</span></div>
+        <div class="project-index mono">CASE 02 / 05 <span>REQUIREMENTS × HUMAN-IN-THE-LOOP AI</span></div><h2>SPEC<br>TRACE</h2><p class="project-deck">A human-in-the-loop, evidence-grounded agent for inspecting changing requests against approved project scope and decision history.</p>
+        <dl class="story-grid"><div><dt>Question</dt><dd>How can scope changes be assessed without guessing or losing earlier decisions?</dd></div><div><dt>Process</dt><dd>Combined deterministic retrieval and gates with structured model assessment and evidence verification.</dd></div><div><dt>Build</dt><dd>Created a Python state machine, Streamlit interface, SQLite decision ledger and explicit human-review boundary.</dd></div><div><dt>Learning</dt><dd>Reliable agent behavior needs traceable evidence, guarded state changes and human authority.</dd></div></dl>
+        <div class="project-foot mono"><span>PYTHON 3.13 / STREAMLIT / PYDANTIC / SQLITE / GEMINI / PYTEST</span><a href="https://github.com/Aaisha-Nexus/spectrace" target="_blank" rel="noreferrer">Repository ↗</a></div>
+      </article>
+      <article class="project project-weather" id="project-03" data-project="weather">
+        <div class="scene-notes weather-notes mono" aria-hidden="true"><span>AQI</span><span>TEMP</span><span>WIND</span><span>FORECAST</span><span>LOCATION</span></div>
+        <div class="project-index mono">CASE 03 / 05 <span>API × BUSINESS INTELLIGENCE</span></div><h2>WEATHER<br>ANALYTICS<br>DASHBOARD</h2><p class="project-deck">Live weather data becomes a model that can be explored by city and time.</p>
+        <dl class="story-grid"><div><dt>Question</dt><dd>How can changing weather data become clear enough to explore?</dd></div><div><dt>Process</dt><dd>Separated API JSON into current, daily, hourly and location entities.</dd></div><div><dt>Build</dt><dd>Created a Power BI model with DAX, city filters, AQI and seven-day forecasts.</dd></div><div><dt>Learning</dt><dd>A readable dashboard depends on thoughtful relationships underneath it.</dd></div></dl>
+        <div class="project-foot mono"><span>WEATHER API / POWER BI / DAX / DATA MODELING</span><a href="https://github.com/Aaisha-Nexus/WeatherAPI_PowerBI_Dashboard" target="_blank" rel="noreferrer">Repository ↗</a></div>
+      </article>
+      <article class="project project-customers" id="project-04" data-project="customers">
+        <div class="scene-notes customer-notes mono" aria-hidden="true"><span>CLUSTER 01</span><span>CLUSTER 02</span><span>CLUSTER 03</span></div>
+        <div class="project-index mono">CASE 04 / 05 <span>BEHAVIOUR × CLUSTERS</span></div><h2>CUSTOMER<br>BEHAVIOUR<br>ANALYSIS</h2><p class="project-deck">A flat customer dataset becomes a set of patterns and questions worth exploring.</p>
+        <dl class="story-grid"><div><dt>Question</dt><dd>What behavioural patterns are hiding inside the customer data?</dd></div><div><dt>Process</dt><dd>Explored the CSV with Python and moved structured analysis into PostgreSQL.</dd></div><div><dt>Build</dt><dd>Created an analytical SQL workflow, Power BI dashboard and report.</dd></div><div><dt>Learning</dt><dd>EDA and SQL reveal different parts of the same question.</dd></div></dl>
+        <div class="project-foot mono"><span>CSV / PYTHON / PANDAS / POSTGRESQL / POWER BI</span><a href="https://github.com/Aaisha-Nexus/Customer_Behavior_Analysis" target="_blank" rel="noreferrer">Repository ↗</a></div>
+      </article>
+      <article class="project project-beauty" id="project-05" data-project="beauty">
+        <div class="scene-notes beauty-notes" aria-hidden="true"><strong>15,000+</strong><div class="mono"><span>INGREDIENT</span><span>RATING</span><span>BRAND</span><span>CATEGORY</span><span>SKIN TYPE</span></div></div>
+        <div class="project-index mono">CASE 05 / 05 <span>PRODUCTS × INGREDIENTS</span></div><h2>BEAUTY<br>PRODUCTS<br>ANALYSIS</h2><p class="project-deck">A catalogue of 15,000+ products becomes a readable system of relationships.</p>
+        <dl class="story-grid"><div><dt>Question</dt><dd>What can a large product catalogue reveal when organized well?</dd></div><div><dt>Process</dt><dd>Structured the records and explored them through 25+ SQL queries.</dd></div><div><dt>Build</dt><dd>Analyzed brands, categories, ratings, skin types and ingredients in Excel.</dd></div><div><dt>Learning</dt><dd>Careful categories can turn volume into something understandable.</dd></div></dl>
+        <div class="project-foot mono"><span>15,000+ PRODUCTS / SQL / KPI ANALYSIS / EXCEL</span><a href="https://github.com/Aaisha-Nexus/Beauty_Products_Data_Analysis" target="_blank" rel="noreferrer">Repository ↗</a></div>
+      </article>
+    </section>
+    <section class="experience experience-v4 chapter chapter-paper" id="experience" data-scene="network" data-index="03">
+      <div class="experience-v4-shell">
+        <div class="experience-v4-head"><div><div class="section-label mono">03 / EXPERIENCE</div><h2>EXPERIENCE</h2></div><p class="mono">TWO SYSTEMS / ONE STAGE</p></div>
+        <div class="experience-v4-grid">
+          <button class="experience-choice is-selected" type="button" data-experience-choice="koder" aria-pressed="true"><span class="mono">01 / WORK CONNECTS</span><strong>KODERLABS</strong><em>Customer Success Intern<br>Business Analyst Track</em><small class="mono">JUL 2026 / AUG 2026</small></button>
+          <div class="experience-v4-stage" data-mode="koder">
+            <div class="puzzle-object" aria-label="Five connected KoderLabs puzzle pieces"><div class="puzzle-title"><span class="mono">KODERLABS / BUSINESS ANALYST TRACK</span><strong>LEARNED HOW<br>WORK MOVES.</strong></div>
+              <button class="puzzle-piece piece-1 is-active" type="button" data-v4-detail="discover"><svg viewBox="0 0 140 140" aria-hidden="true"><path d="M12 12H128V54C151 45 151 95 128 86V128H86C95 151 45 151 54 128H12V86C35 95 35 45 12 54Z"/></svg><i>01</i><b>DISCOVER</b></button><button class="puzzle-piece piece-2" type="button" data-v4-detail="requirements"><svg viewBox="0 0 140 140" aria-hidden="true"><path d="M12 12H54C45 35 95 35 86 12H128V54C151 45 151 95 128 86V128H86C95 105 45 105 54 128H12V86C35 95 35 45 12 54Z"/></svg><i>02</i><b>REQUIREMENTS</b></button><button class="puzzle-piece piece-3" type="button" data-v4-detail="validate"><svg viewBox="0 0 140 140" aria-hidden="true"><path d="M12 12H54C45 35 95 35 86 12H128V54C105 45 105 95 128 86V128H86C95 151 45 151 54 128H12V86C35 95 35 45 12 54Z"/></svg><i>03</i><b>VALIDATE</b></button><button class="puzzle-piece piece-4" type="button" data-v4-detail="test"><svg viewBox="0 0 140 140" aria-hidden="true"><path d="M12 12H54C45-11 95-11 86 12H128V54C151 45 151 95 128 86V128H86C95 105 45 105 54 128H12V86C-11 95-11 45 12 54Z"/></svg><i>04</i><b>TEST</b></button><button class="puzzle-piece piece-5" type="button" data-v4-detail="collaborate"><svg viewBox="0 0 140 140" aria-hidden="true"><path d="M12 12H54C45-11 95-11 86 12H128V54C105 45 105 95 128 86V128H86C95 151 45 151 54 128H12V86C-11 95-11 45 12 54Z"/></svg><i>05</i><b>COLLABORATE</b></button>
+            </div>
+            <div class="network-object" aria-label="MLSA knowledge relay"><div class="relay-title"><span class="mono">MICROSOFT LEARN STUDENT AMBASSADORS</span><strong>IDEAS MOVE<br>THROUGH PEOPLE.</strong></div><svg class="relay-route" viewBox="0 0 600 350" aria-hidden="true"><path d="M72 104 C145 104 144 245 220 245 S300 104 378 104 S455 245 528 245"/></svg><button class="network-person person-1" type="button" data-v4-detail="speak"><i></i><b>01 SPEAK</b><em>VOICE</em></button><button class="network-person person-2" type="button" data-v4-detail="plan"><i></i><b>02 PLAN</b><em>INTENT</em></button><button class="network-person person-3" type="button" data-v4-detail="mlsa-collaborate"><i></i><b>03 COLLABORATE</b><em>TOGETHER</em></button><button class="network-person person-4" type="button" data-v4-detail="grow"><i></i><b>04 GROW</b><em>IMPACT</em></button><span class="network-packet"><i></i></span><span class="relay-caption mono">A SINGLE SIGNAL / SHARED FORWARD</span></div>
+            <div class="experience-v4-detail" aria-live="polite">
+            <article class="is-active" data-experience-detail="discover"><span class="mono">01 / KODERLABS</span><h3>DISCOVER</h3><p>Observed client discovery, proposal, pre-sales and post-sales discussions to understand how projects move from requirements toward delivery.</p></article>
+            <article data-experience-detail="requirements"><span class="mono">02 / KODERLABS</span><h3>REQUIREMENTS</h3><p>Practiced gathering and clarifying requirements while becoming more aware of ambiguity, workflow gaps and possible scope changes.</p></article>
+            <article data-experience-detail="validate"><span class="mono">03 / KODERLABS</span><h3>VALIDATE</h3><p>Built requirement-gathering and validation workflows independently and collaboratively.</p></article>
+            <article data-experience-detail="test"><span class="mono">04 / KODERLABS</span><h3>TEST</h3><p>Participated in feedback meetings and Agile reviews, then beta tested a web application, documented usability observations and presented workflow recommendations.</p></article>
+            <article data-experience-detail="collaborate"><span class="mono">05 / KODERLABS</span><h3>COLLABORATE</h3><p>Observed how Business Analysis, Requirement Management, Project Management, Development, QA and Customer Success connect across delivery.</p></article>
+            <article data-experience-detail="plan"><span class="mono">01 / MLSA</span><h3>PLAN</h3><p>Partnered with the management team to plan technical workshops and student engagement initiatives.</p></article>
+            <article data-experience-detail="speak"><span class="mono">02 / MLSA</span><h3>SPEAK</h3><p>Served as a speaker and panelist at community events, sharing experiences around career growth, data analytics and the student journey in tech.</p></article>
+            <article data-experience-detail="mlsa-collaborate"><span class="mono">03 / MLSA</span><h3>COLLABORATE</h3><p>Worked alongside Microsoft Learn Student Ambassadors and volunteers to help create an inclusive and engaging learning environment.</p></article>
+            <article data-experience-detail="grow"><span class="mono">04 / MLSA</span><h3>GROW</h3><p>Developed leadership, communication and event coordination skills while contributing to the university tech community.</p></article>
+            </div>
+          </div>
+          <button class="experience-choice" type="button" data-experience-choice="mlsa" aria-pressed="false"><span class="mono">02 / PEOPLE CONNECT</span><strong>MICROSOFT LEARN<br>STUDENT AMBASSADORS</strong><em>University of Karachi<br>Management Volunteer</em><small class="mono">SEP 2025 / PRESENT</small></button>
+        </div>
+        <p class="experience-v4-hint mono">SELECT AN EXPERIENCE / SELECT A FORM TO READ</p>
+        <div class="experience-system legacy-experience-system" aria-hidden="true">
+          <div class="experience-org experience-org-koder"><strong>KODERLABS</strong><span class="mono">CUSTOMER SUCCESS INTERN<br>BUSINESS ANALYST TRACK<br>JUL 2026 / AUG 2026</span></div>
+          <div class="experience-org experience-org-mlsa"><strong>MICROSOFT LEARN<br>STUDENT AMBASSADORS</strong><span class="mono">UNIVERSITY OF KARACHI<br>MANAGEMENT VOLUNTEER<br>SEP 2025 / PRESENT</span></div>
+          <svg class="experience-routes" viewBox="0 0 1000 700" preserveAspectRatio="none" aria-hidden="true">
+            <g class="route-bed"><path d="M72 190 H208 C242 190 242 285 278 285 H416 C450 285 450 190 486 190 H625 C660 190 660 285 696 285 H790 C825 285 825 354 850 354"/><path d="M850 354 C790 390 746 438 706 510"/><path d="M850 354 C886 409 900 460 916 520"/><path d="M850 354 C820 475 808 555 824 625"/><path d="M850 354 C930 382 956 426 963 454"/><path d="M706 510 C760 548 788 584 824 625"/><path d="M916 520 C890 566 864 598 824 625"/></g>
+            <path class="route route-main" pathLength="1" d="M72 190 H208 C242 190 242 285 278 285 H416 C450 285 450 190 486 190 H625 C660 190 660 285 696 285 H790 C825 285 825 354 850 354"/>
+            <path class="route route-branch" pathLength="1" d="M850 354 C790 390 746 438 706 510"/><path class="route route-branch" pathLength="1" d="M850 354 C886 409 900 460 916 520"/><path class="route route-branch" pathLength="1" d="M850 354 C820 475 808 555 824 625"/><path class="route route-branch" pathLength="1" d="M850 354 C930 382 956 426 963 454"/>
+            <path class="route route-soft" pathLength="1" d="M706 510 C760 548 788 584 824 625"/><path class="route route-soft" pathLength="1" d="M916 520 C890 566 864 598 824 625"/>
+          </svg>
+          <span class="experience-signal" aria-hidden="true"></span>
+          <button class="experience-node route-module module-discover is-active" data-experience-node="discover" style="--x:7%;--y:27%"><span>01</span><b>DISCOVER</b><i></i></button>
+          <button class="experience-node route-module module-define" data-experience-node="requirements" style="--x:28%;--y:40%"><span>02</span><b>REQUIREMENTS</b><i></i></button>
+          <button class="experience-node route-module module-validate" data-experience-node="validate" style="--x:49%;--y:27%"><span>03</span><b>VALIDATE</b><i></i></button>
+          <button class="experience-node route-module module-test" data-experience-node="test" style="--x:69%;--y:40%"><span>04</span><b>TEST</b><i></i></button>
+          <button class="experience-node route-module module-deliver junction-node" data-experience-node="collaborate" style="--x:83%;--y:34%"><span>05</span><b>COLLABORATE</b><i></i><em></em></button>
+          <button class="experience-node community-node module-plan" data-experience-node="plan" style="--x:64%;--y:72%"><span>01</span><b>PLAN</b><i></i></button>
+          <button class="experience-node community-node module-speak" data-experience-node="speak" style="--x:82%;--y:65%"><span>02</span><b>SPEAK</b><i></i></button>
+          <button class="experience-node community-node module-share" data-experience-node="mlsa-collaborate" style="--x:78%;--y:86%"><span>03</span><b>COLLABORATE</b><i></i></button>
+          <button class="experience-node community-node module-grow" data-experience-node="grow" style="--x:95%;--y:78%"><span>04</span><b>GROW</b><i></i></button>
+          <div class="experience-echoes" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="experience-packets" aria-hidden="true"><i></i><i></i><i></i></div>
+        </div>
+      </div>
+    </section>
+    <section class="learning chapter chapter-chalk" id="learning" data-scene="archive" data-index="04">
+      <div class="section-label mono">04 / CERTIFICATES + CONTINUOUS LEARNING</div><div class="learning-intro"><p class="mono">IN PROGRESS / ALWAYS</p><h2>LEARN.<br>SHARE.<br>REPEAT.</h2></div>
+      <div class="community-map"><div class="community-center"><span class="mono">MICROSOFT LEARN STUDENT AMBASSADORS · UOK</span><h3>Learning spreads when people share it.</h3></div><article><i>01</i><strong>Speak</strong><p>Served as a speaker and panelist at community events, sharing insights on career growth, data analytics and the student journey in tech.</p></article><article><i>02</i><strong>Plan</strong><p>Partnered with the management team to plan technical workshops and student engagement initiatives.</p></article><article><i>03</i><strong>Collaborate</strong><p>Worked with Microsoft Learn Student Ambassadors and volunteers to contribute to an inclusive, engaging learning environment.</p></article><article><i>04</i><strong>Grow</strong><p>Developed communication, leadership and event coordination skills while contributing to the university tech community.</p></article></div>
+      <div class="certificates-heading"><span class="mono">SELECTED CREDENTIALS / 2025—2026</span><h3>CERTIFICATES</h3></div><ol class="archive-list"><li><span class="mono">2026 / DATACAMP · IN PROGRESS</span><strong>Associate Data Engineer in SQL</strong><i>01</i></li><li><span class="mono">2025 / DATACAMP</span><strong>Associate Data Analyst in SQL</strong><i>02</i></li><li><span class="mono">2025 / IBM · COURSERA</span><strong>Python for Data Science, AI and Development</strong><i>03</i></li><li><span class="mono">2026 / FORAGE</span><strong>BCG Data for Decision Makers Job Simulation</strong><i>04</i></li><li><span class="mono">2025 / HP LIFE</span><strong>Data Science and Analytics</strong><i>05</i></li></ol>
+    </section>
+    <section class="beyond chapter chapter-dark" id="beyond" data-scene="world" data-index="05">
+      <div class="section-label mono">05 / BEYOND DATA</div><div class="beyond-title"><p class="mono">OFF THE CLOCK / STILL CURIOUS</p><h2>THINGS THAT<br>MAKE ME, <span>ME.</span></h2></div>
+      <div class="personal-deck" aria-label="Things that make me, me"><button class="personal-card" type="button" style="--closed-x:-175px;--open-x:-425px;--r:-11deg;--open-r:-13deg;--z:1"><img src="./assets/personal/tea.jpg" alt="A terracotta cup of tea outdoors"><span class="mono">01 / RITUAL</span><strong>TEA</strong><em>Tea over coffee.<br>Always.</em></button><button class="personal-card" type="button" style="--closed-x:-105px;--open-x:-255px;--r:-7deg;--open-r:-8deg;--z:2"><img src="./assets/personal/books.jpg" alt="The Kite Runner arranged on sunlit bedding"><span class="mono">02 / STORIES</span><strong>BOOKS</strong><em>Reading slows the world down long enough to notice more.</em></button><button class="personal-card" type="button" style="--closed-x:-35px;--open-x:-85px;--r:-2deg;--open-r:-3deg;--z:3"><img src="./assets/personal/flowers.jpeg" alt="Colorful flowers in a garden"><span class="mono">03 / NOTICE</span><strong>FLOWERS</strong><em>I’ll stop for flowers every time.</em></button><button class="personal-card" type="button" style="--closed-x:35px;--open-x:85px;--r:3deg;--open-r:3deg;--z:4"><img src="./assets/personal/painting.jpeg" alt="A handmade painting of three candles"><span class="mono">04 / MAKE</span><strong>PAINTING</strong><em>Sometimes I’d rather make a mess with color than clean a dataset.</em></button><button class="personal-card" type="button" style="--closed-x:105px;--open-x:255px;--r:7deg;--open-r:8deg;--z:5"><img src="./assets/personal/travel.jpeg" alt="A snowy northern mountain beneath blue sky"><span class="mono">05 / WANDER</span><strong>TRAVEL</strong><em>Places remind me how much there still is to see.</em></button><button class="personal-card" type="button" style="--closed-x:175px;--open-x:425px;--r:11deg;--open-r:13deg;--z:6"><img src="./assets/personal/writing.jpg" alt="A handwritten notebook beside a laptop"><span class="mono">06 / REFLECT</span><strong>WRITING</strong><em>Writing helps me catch a thought before it disappears.</em></button></div>
+      <p class="personal-hint mono">HOVER TO OPEN / SELECT A CARD</p><canvas class="paint-layer" id="paintLayer" aria-hidden="true"></canvas>
+    </section>
+    <section class="contact chapter chapter-paper" id="contact" data-scene="final" data-index="06">
+      <div class="section-label mono">06 / CONTACT</div><h2>LET’S<br><span>CONNECT.</span></h2>
+      <div class="contact-links"><a href="mailto:aaishaeduc@gmail.com"><span>Email</span><strong>aaishaeduc@gmail.com</strong><i>↗</i></a><a href="https://www.linkedin.com/in/aaisha-iqbal/" target="_blank" rel="noreferrer"><span>LinkedIn</span><strong>linkedin.com/in/aaisha-iqbal/</strong><i>↗</i></a><a href="https://github.com/Aaisha-Nexus" target="_blank" rel="noreferrer"><span>GitHub</span><strong>github.com/Aaisha-Nexus</strong><i>↗</i></a><a href="https://www.instagram.com/blog.with.aaisha/" target="_blank" rel="noreferrer"><span>Instagram</span><strong>instagram.com/blog.with.aaisha/</strong><i>↗</i></a></div>
+      <div class="contact-bottom"><p>Karachi, Pakistan</p><p class="mono">AAISHA IQBAL<br>PORTFOLIO / 2026</p></div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js"}}</script>
+  <script type="module" src="./app.js?v=beyond-edge-safe-20260924"></script>
+</body>
+</html>
