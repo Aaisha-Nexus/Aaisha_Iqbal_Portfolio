@@ -367,3 +367,7 @@ html,body{overflow-x:hidden}
 .beyond-title{translate:0 -22px}.personal-card:nth-child(1){--open-x:clamp(-690px,-36vw,-335px)!important}.personal-card:nth-child(6){--open-x:clamp(335px,36vw,690px)!important}
 @media(max-width:1050px) and (min-width:701px){.personal-card:nth-child(1){--open-x:-35vw!important}.personal-card:nth-child(6){--open-x:35vw!important}}
 @media(max-width:700px){.beyond-title{translate:0 -8px}}
+
+/* Five-card Beyond composition after removing Tea. */
+.personal-card:nth-child(1){--open-x:clamp(-690px,-36vw,-335px)!important}.personal-card:nth-child(2){--open-x:clamp(-350px,-18vw,-170px)!important}.personal-card:nth-child(3){--open-x:0px!important}.personal-card:nth-child(4){--open-x:clamp(170px,18vw,350px)!important}.personal-card:nth-child(5){--open-x:clamp(335px,36vw,690px)!important}
+@media(max-width:1050px) and (min-width:701px){.personal-card:nth-child(1){--open-x:-35vw!important}.personal-card:nth-child(2){--open-x:-17.5vw!important}.personal-card:nth-child(3){--open-x:0!important}.personal-card:nth-child(4){--open-x:17.5vw!important}.personal-card:nth-child(5){--open-x:35vw!important}}

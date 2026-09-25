@@ -215,40 +215,6 @@ const cobalt = new THREE.MeshBasicMaterial({ color: 0x2457ff, wireframe: true, t
 const acid = new THREE.MeshBasicMaterial({ color: 0xb9ff38, wireframe: true, transparent: true, opacity: 0.72 });
 const pale = new THREE.MeshBasicMaterial({ color: 0xe8e6de, wireframe: true, transparent: true, opacity: 0.48 });
 
-const cup = new THREE.Group();
-cup.add(new THREE.Mesh(new THREE.CylinderGeometry(0.72, 0.58, 0.85, 28, 1, true), cobalt));
-const handle = new THREE.Mesh(new THREE.TorusGeometry(0.43, 0.09, 10, 28, Math.PI * 1.55), cobalt);
-handle.position.set(0.63, 0.05, 0);
-handle.rotation.y = Math.PI / 2;
-cup.add(handle);
-cup.position.set(1.9, 0.8, 0);
-worldObjects.add(cup);
-const teaPour = new THREE.Mesh(new THREE.CylinderGeometry(0.035, 0.055, 1.25, 10), new THREE.MeshBasicMaterial({ color: 0xb9ff38, transparent: true, opacity: 0.72 }));
-teaPour.position.set(1.9, 1.78, 0);
-teaPour.scale.y = 0;
-worldObjects.add(teaPour);
-const teaFill = new THREE.Mesh(new THREE.CylinderGeometry(0.55, 0.48, 0.55, 28), new THREE.MeshBasicMaterial({ color: 0xb9ff38, transparent: true, opacity: 0.25 }));
-teaFill.position.set(1.9, 0.61, 0);
-teaFill.scale.y = 0.02;
-worldObjects.add(teaFill);
-const teapot = new THREE.Group();
-teapot.add(new THREE.Mesh(new THREE.SphereGeometry(0.45, 16, 12), cobalt));
-const spout = new THREE.Mesh(new THREE.ConeGeometry(0.14, 0.72, 12), cobalt);
-spout.rotation.z = -Math.PI / 2;
-spout.position.x = 0.55;
-teapot.add(spout);
-teapot.position.set(0.78, 2.18, 0);
-worldObjects.add(teapot);
-const steam = new THREE.Group();
-for (let i = 0; i < 3; i += 1) {
-  const steamCurve = new THREE.CatmullRomCurve3([
-    new THREE.Vector3(i * 0.16 - 0.16, 0, 0), new THREE.Vector3(i * 0.16 - 0.24, 0.35, 0), new THREE.Vector3(i * 0.16 - 0.1, 0.72, 0)
-  ]);
-  steam.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(steamCurve.getPoints(24)), new THREE.LineBasicMaterial({ color: 0xe8e6de, transparent: true, opacity: 0 })));
-}
-steam.position.set(1.9, 1.22, 0);
-worldObjects.add(steam);
-
 const book = new THREE.Group();
 const coverA = new THREE.Mesh(new THREE.BoxGeometry(1.7, 0.08, 2.15), pale);
 const coverB = coverA.clone();
@@ -717,11 +683,6 @@ function activateWorldObject(button, react = false) {
       item.closest(".world-stop").classList.toggle("is-active", item === button);
     });
     if (!gsap || !react) return;
-    if (activeObject === "tea") {
-      gsap.timeline().to(teapot.rotation, { z: -0.58, duration: 0.55, ease: "power2.inOut" }).fromTo(teaPour.scale, { y: 0 }, { y: 1, duration: 0.45, yoyo: true, repeat: 1, repeatDelay: 0.55 }, "-=.12").to(teaFill.scale, { y: 1, duration: 0.9 }, "-=.9").to(steam.children.map((item) => item.material), { opacity: 0.42, stagger: 0.1, duration: 0.5 }, "-=.35").to(teapot.rotation, { z: 0, duration: 0.7, ease: "power2.inOut" });
-      gsap.to(steam.children.map((item) => item.material), { opacity: 0, delay: 2.4, duration: 1.2 });
-      gsap.to(teaFill.scale, { y: 0.02, delay: 2.7, duration: 0.8 });
-    }
     if (activeObject === "books") {
       gsap.to(coverA.rotation, { x: -1.15, z: 0.12, duration: 0.8, ease: "power3.inOut", yoyo: true, repeat: 1, repeatDelay: 0.7 });
       gsap.to(book.position, { y: -0.68, duration: 0.6, ease: "back.out(1.5)", yoyo: true, repeat: 1, repeatDelay: 0.9 });
@@ -976,13 +937,18 @@ if (ScrollTrigger) {
     }
   }
   if (!reducedMotion) {
-    document.querySelectorAll(".intro-layout, .section-head, .learning-intro, .community-map, .archive-list, .beyond-title, .world-tour, .contact h2, .contact-links").forEach((element) => {
+    document.querySelectorAll(".section-head, .learning-intro, .community-map, .archive-list, .beyond-title, .world-tour, .contact h2, .contact-links").forEach((element) => {
       gsap.from(element, { y: 50, opacity: 0, duration: 0.9, ease: "power3.out", scrollTrigger: { trigger: element, start: "top 86%" } });
     });
+    gsap.timeline({
+      scrollTrigger: { trigger: "#about", start: "top bottom", end: "bottom top", scrub: .45, invalidateOnRefresh: true }
+    })
+      .fromTo(".intro-layout", { y: 50, opacity: 0 }, { y: 0, opacity: 1, duration: .18, ease: "power3.out", immediateRender: false }, 0)
+      .to(".intro-layout", { y: 0, opacity: 1, duration: .62, ease: "none" }, .18)
+      .to(".intro-layout", { y: -18, opacity: 0, duration: .20, ease: "power2.in" }, .80);
     gsap.to(".about-paths", { scale: 0.12, opacity: 0, transformOrigin: "50% 55%", ease: "power2.inOut", scrollTrigger: { trigger: "#about", start: "55% top", end: "bottom top", scrub: 1 } });
     gsap.to(".path-dominant", { strokeDashoffset: -180, ease: "none", scrollTrigger: { trigger: "#about", start: "top center", end: "bottom top", scrub: 1 } });
     gsap.to(".path-node", { y: (index) => index % 2 ? -24 : 18, stagger: 0.03, ease: "power1.inOut", scrollTrigger: { trigger: "#about", start: "top 70%", end: "bottom 20%", scrub: 1 } });
-    gsap.to(".intro-layout", { y: -18, opacity: 0, ease: "power2.in", scrollTrigger: { trigger: "#about", start: "78% top", end: "bottom top", scrub: .45 } });
     gsap.to(".intro-wave-canvas", { x: "10vw", opacity: 0, ease: "power1.in", scrollTrigger: { trigger: "#about", start: "84% top", end: "bottom top", scrub: .45 } });
   }
 
@@ -1114,7 +1080,6 @@ function animate() {
     worldObjects.rotation.y += ((pointerX * 0.35 + dragRotation) - worldObjects.rotation.y) * 0.035;
     worldObjects.rotation.x += ((-pointerY * 0.18) - worldObjects.rotation.x) * 0.035;
     flower.rotation.z = time * 0.08;
-    cup.position.y = 0.8 + Math.sin(time * 0.7) * 0.08;
     if (mode === "beauty") particles.rotation.z = sceneProgress * Math.PI * 0.32 + pointerX * 0.08;
     else particles.rotation.z *= 0.94;
     if (mode === "crop") {
@@ -1145,7 +1110,6 @@ function animate() {
     });
   }
   if (mode === "world" && !reducedMotion) {
-    steam.position.y = 1.22 + Math.sin(time * 1.4) * .05;
     fallingPetals.forEach((petal, index) => { if (petal.visible) petal.position.x += Math.sin(time * 1.8 + index) * .0018; });
   }
   renderer.render(scene, camera);
